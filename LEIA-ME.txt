@@ -1,0 +1,21 @@
+SIGA-MATAPI 3.8 — PACOTE PWA OFFLINE
+
+CONTEÚDO: index.html, manifest.webmanifest, sw.js e ícones.
+
+COMO INSTALAR:
+1. Publique TODOS os arquivos juntos em uma hospedagem HTTPS (por exemplo, GitHub Pages).
+2. Acesse o endereço online uma vez com internet no celular.
+3. No Chrome/Edge, use "Instalar aplicativo" ou "Adicionar à tela inicial".
+4. Abra novamente com internet e teste o preenchimento. Depois ative o modo avião e abra o app instalado.
+
+TESTE NO COMPUTADOR:
+Com Python instalado, execute nesta pasta: python -m http.server 8000
+Abra http://localhost:8000. Acesse uma vez online e recarregue; então teste a opção Offline no DevTools.
+
+IMPORTANTE:
+- Abrir index.html como file:// NÃO instala o service worker nem garante o modo PWA offline.
+- As fichas são salvas no navegador/aparelho, conforme implementação existente.
+- Não existe login real, banco compartilhado nem sincronização automática nesta versão.
+- Não limpe dados do site nem desinstale antes de exportar/backupear registros.
+- Teste com dados fictícios. Para uso oficial, exigir aprovação da OM, controles de acesso, política de backup e servidor.
+- Fotos e assinaturas podem consumir bastante armazenamento do celular; valide limites do navegador.
