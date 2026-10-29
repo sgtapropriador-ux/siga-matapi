@@ -171,7 +171,7 @@ async function showRecord(id){let d=await tx('records','readonly',o=>o.get(id));
 async function render(){network();if(page==='home'){$('#app').innerHTML=home();let r=await getAll('records'),d=await getAll('drafts');$('#countR').textContent=r.length;renderSyncArea();$('#countD').textContent=d.length;$('#countP').textContent=r.filter(x=>x.status==='Aguardando conferência').length;document.querySelectorAll('[data-front]').forEach(e=>e.onclick=()=>{draft=blank(e.dataset.front);step=0;nav('form')})}else if(page==='form'){if(!draft)draft=blank();$('#app').innerHTML=form();bindForm()}else if(page==='records'||page==='admin'){$('#app').innerHTML=await records(page==='admin');await bindRecords()}}
 
 // SIGA 4.0: envio manual de registros de teste. Nunca armazene chaves administrativas no navegador.
-const SIGA_URL='https://heyterqevtszkohjiqi.supabase.co';
+const SIGA_URL='https://heyterqevtszhkohjiqi.supabase.co';
 const SIGA_KEY='sb_publishable_aB6sgt2UA9VP3vDsFKvyfA_U_84xRIg';
 let sigaSession=null, sigaBusy=false;
 const sigaHeaders=(token)=>({'apikey':SIGA_KEY,'Authorization':'Bearer '+(token||SIGA_KEY),'Content-Type':'application/json'});
