@@ -1,4 +1,4 @@
-const CACHE = 'siga-matapi-v3-8-20261028';
+const CACHE = 'siga-matapi-v4-0-test-20261029';
 const ASSETS = ['./','./index.html','./manifest.webmanifest','./icon-192.png','./icon-512.png'];
 self.addEventListener('install', event => { event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(ASSETS)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', event => { event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(key => key.startsWith('siga-matapi-') && key !== CACHE).map(key => caches.delete(key)))).then(() => self.clients.claim())); });
